@@ -1,5 +1,19 @@
-#Import Data Phase
 initial_folder <- "./data/"
+filename <- paste(initial_folder,"Final_Exam_W4_Coursera.zip",sep="")
+   
+# Checking if archieve already exists.
+if (!file.exists(filename)){
+  fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  download.file(fileURL, filename)
+}  
+resulting_folder <- paste(initial_folder,"UCI HAR Dataset",sep="")
+# Checking if folder exists
+if (!file.exists(resulting_folder)) { 
+  unzip(filename,exdir=gsub("/$","",initial_folder)) 
+}
+
+#Import Data Phase
+initial_folder <-paste(initial_folder,"UCI HAR Dataset/",sep="")
 test_folder <- paste(initial_folder,"test/",sep = "")
 train_folder <- paste(initial_folder,"train/",sep = "")
 initial_files <- list.files(initial_folder)
