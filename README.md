@@ -1,6 +1,7 @@
 # Getting-and-Cleaning-Data
 Final Peer Review Exam
 
+For this work I made a mistake uploading the dataset and sadly I cannot correct it (I don't know how). This being said, the scrip, if executed, will automatically download and unzip the data, therefore there is no real need of having the data in this repository! 
 
 Franco Tagliani Submission for Getting and Cleaning Data Exam
 
